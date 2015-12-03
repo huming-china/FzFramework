@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/tab_icon_more"
+                    style="@style/home_buttom_tab_iv" />
+
+                <TextView
+                    style="@style/home_bottom_tab_tv"
+                    android:layout_below="@+id/tab_icon_more"
+                    android:text="资讯" />
+
+                <TextView
+                    android:id="@+id/numberTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/tab_icon_more"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="18"
+                    android:textColor="#ffffffff"
+                    android:textSize="8sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/tab_icon_pingou"
+                    style="@style/home_buttom_tab_iv" />
+
+                <TextView
+                    style="@style/home_bottom_tab_tv"
+                    android:layout_below="@+id/tab_icon_pingou"
+                    android:text="圈子" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/tab_icon_index"
+                    style="@style/home_buttom_tab_iv" />
+
+                <TextView
+                    style="@style/home_bottom_tab_tv"
+                    android:layout_below="@+id/tab_icon_index"
+                    android:text="我的" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+    android:id="@+id/drawer_left"
+    android:orientation="vertical"
+    android:layout_width="200dp"
+    android:layout_gravity="start"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+</LinearLayout>
+</android.support.v4.widget.DrawerLayout></LinearLayout>
