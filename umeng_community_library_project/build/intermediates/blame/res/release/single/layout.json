@@ -176,12 +176,12 @@
         "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\res\\layout\\umeng_comm_msg_comment_footer.xml"
     },
     {
-        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\release\\layout\\umeng_comm_notify_activity.xml",
-        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\res\\layout\\umeng_comm_notify_activity.xml"
-    },
-    {
         "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\release\\layout\\umeng_comm_feeds_follow.xml",
         "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\res\\layout\\umeng_comm_feeds_follow.xml"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\release\\layout\\umeng_comm_notify_activity.xml",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\res\\layout\\umeng_comm_notify_activity.xml"
     },
     {
         "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\release\\layout\\umeng_comm_my_msg_layout.xml",

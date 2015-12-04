@@ -1,5 +1,6 @@
 package com.ikimuhendis.ldrawer;
 
+import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 
@@ -164,8 +166,12 @@ public class ActionBarDrawerToggle extends android.support.v4.app.ActionBarDrawe
                 if (Build.VERSION.SDK_INT <= 19) {
                     mActivity.getActionBar().setSubtitle(mActivity.getActionBar().getSubtitle());
                 }
-            } catch (Exception e) {
+            } catch (NoSuchMethodException e) {
                 Log.e(TAG, "setActionBarUpIndicator", e);
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
             }
         }
     }

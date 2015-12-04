@@ -24,6 +24,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"></FrameLayout>
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -59,6 +61,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/tab2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
@@ -74,12 +77,14 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/tab3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/tab_icon_index"
+                    android:src="@drawable/umeng_comm_find_pressed"
                     style="@style/home_buttom_tab_iv" />
 
                 <TextView
