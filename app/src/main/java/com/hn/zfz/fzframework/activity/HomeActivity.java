@@ -1,6 +1,7 @@
 package com.hn.zfz.fzframework.activity;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.hn.zfz.fzframework.HomeFramentAdapter;
 import com.hn.zfz.fzframework.R;
@@ -27,6 +29,8 @@ import com.umeng.comm.core.constants.Constants;
 import com.umeng.comm.core.constants.ErrorCode;
 import com.umeng.comm.core.impl.CommunityFactory;
 import com.umeng.comm.core.login.LoginListener;
+import com.umeng.comm.core.utils.ResFinder;
+import com.umeng.comm.ui.activities.NotificationActivity;
 import com.umeng.comm.ui.fragments.CommunityMainFragment;
 import com.umeng.comm.ui.fragments.FindFragment;
 
@@ -39,7 +43,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     private ContentFragment mContentFragment;
     private CommunityMainFragment mFeedsFragment;
     private FindFragment mFindFragment;
-    private Fragment currtFragment;
+    private TextView tvTitle;
+    private TextView tvRight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +55,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setCustomView(R.layout.layout_toolbar);
-
+        tvTitle= (TextView) findViewById(R.id.tv_title);
+        tvRight= (TextView) findViewById(R.id.tv_right);
         LeftMenuFrame=findViewById(R.id.drawer_left);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 
@@ -115,6 +121,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         findViewById(R.id.tab3).setOnClickListener(this);
     }
    private void showFragment(int position){
+       showActionBar(position);
        FragmentTransaction mTransaction= mFragmentManager.beginTransaction();
        switch (position){
            case 1:
@@ -154,6 +161,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        int tvRightId=ResFinder.getId("umeng_comm_title_notify_btn");
         switch (v.getId()){
             case R.id.tab2:
                 showFragment(2);
@@ -161,16 +169,29 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             case R.id.tab3:
                 showFragment(3);
                 break;
+            case tvRightId:
+//                Intent intent = new Intent(getActivity(), NotificationActivity.class);
+//                intent.putExtra(Constants.USER, mUser);
+//                startActivity(intent);
+                break;
         }
     }
     //Tab3
     private void showActionBar(int position){
         switch (position){
             case 1:
+                tvRight.setVisibility(View.GONE);
+                tvTitle.setText("资讯");
                 break;
             case 2:
+                tvRight.setVisibility(View.GONE);
+                tvTitle.setText("社区");
                 break;
             case 3:
+                tvRight.setVisibility(View.VISIBLE);
+                tvTitle.setText("发现");
+                // 右上角的通知
+                findViewById(ResFinder.getId("umeng_comm_title_notify_btn")).setOnClickListener(this);
                 break;
         }
 

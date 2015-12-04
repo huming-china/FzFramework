@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="title"
-        android:id="@+id/textView"
+        android:id="@+id/tv_title"
         android:layout_marginRight="20dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
@@ -22,7 +22,7 @@
         android:background="@drawable/umeng_comm_circle_shape" />
 
     <TextView
-        android:id="@+id/umeng_comm_title_notify_btn"
+        android:id="@+id/tv_right"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_centerVertical="true"

@@ -37,26 +37,26 @@
                 android:text="@string/umeng_comm_user_center"
                 android:textSize="@dimen/text_big16_size" />
 
-            <View
-                android:id="@+id/umeng_comm_badge_view"
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/umeng_comm_circle_shape" />
+            <!--<View-->
+                <!--android:id="@+id/umeng_comm_badge_view"-->
+                <!--android:layout_width="6dp"-->
+                <!--android:layout_height="6dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginTop="3dp"-->
+                <!--android:background="@drawable/umeng_comm_circle_shape" />-->
 
-            <TextView
-                android:id="@+id/umeng_comm_title_notify_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/umeng_comm_badge_view"
-                android:drawableLeft="@drawable/umeng_comm_notify"
-                android:drawablePadding="3dp"
-                android:gravity="center"
-                android:text="@string/umeng_comm_notify"
-                android:textSize="@dimen/text_big16_size" />
+            <!--<TextView-->
+                <!--android:id="@+id/umeng_comm_title_notify_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_toLeftOf="@id/umeng_comm_badge_view"-->
+                <!--android:drawableLeft="@drawable/umeng_comm_notify"-->
+                <!--android:drawablePadding="3dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/umeng_comm_notify"-->
+                <!--android:textSize="@dimen/text_big16_size" />-->
         </RelativeLayout>
 
         <include layout="@layout/umeng_comm_divide_line" />

@@ -68,7 +68,7 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
     private RealTimeFeedFragment mRealTimeFeedFragment;
     private MessageCount mUnReadMsg;
     private View mMsgBadgeView;
-    private View mNotifyBadgeView;
+    //private View mNotifyBadgeView;
 
     @Override
     protected void initWidgets() {
@@ -83,8 +83,7 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
         findViewById(ResFinder.getId("umeng_comm_favortes")).setOnClickListener(this);
         findViewById(ResFinder.getId("umeng_comm_notification")).setOnClickListener(this);
         findViewById(ResFinder.getId("umeng_comm_realtime")).setOnClickListener(this);
-        // 右上角的通知
-        findViewById(ResFinder.getId("umeng_comm_title_notify_btn")).setOnClickListener(this);
+
         // 未读消息红点
         mMsgBadgeView = findViewById(ResFinder.getId("umeng_comm_notify_badge_view"));
         mMsgBadgeView.setVisibility(View.GONE);
@@ -156,7 +155,7 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
             setting.putExtra(Constants.TYPE_CLASS, mContainerClass);
             startActivity(setting);
         } else if (id == ResFinder.getId("umeng_comm_title_notify_btn")) { // 点击右上角的通知
-            gotoNotificationActivity();
+            //gotoNotificationActivity();
         } else if (id == ResFinder.getId("umeng_comm_realtime")) { // 实时内容
             showRealTimeFeed();
         }
