@@ -169,7 +169,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
             case R.id.tab3:
                 showFragment(3);
                 break;
-            case tvRightId:
+            case tvRightId: a
 //                Intent intent = new Intent(getActivity(), NotificationActivity.class);
 //                intent.putExtra(Constants.USER, mUser);
 //                startActivity(intent);
