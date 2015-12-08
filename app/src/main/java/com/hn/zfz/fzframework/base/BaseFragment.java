@@ -17,6 +17,7 @@ import com.hn.zfz.fzframework.R;
 
 public class BaseFragment extends Fragment {
     public boolean isActive=false;
+    protected Context mContext;
     //public ActivityState activityState = ActivityState.DESTROY;
 
 
@@ -30,6 +31,7 @@ public class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         isActive=true;
+        mContext=getActivity();
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 

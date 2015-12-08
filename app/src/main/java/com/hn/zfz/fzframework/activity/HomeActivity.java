@@ -4,37 +4,30 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.hn.zfz.fzframework.HomeFramentAdapter;
 import com.hn.zfz.fzframework.R;
 import com.hn.zfz.fzframework.base.BaseActivity;
 import com.hn.zfz.fzframework.fragment.ContentFragment;
-import com.hn.zfz.fzframework.fragment.MineFragment;
 import com.ikimuhendis.ldrawer.ActionBarDrawerToggle;
 import com.ikimuhendis.ldrawer.DrawerArrowDrawable;
 import com.umeng.comm.core.CommunitySDK;
 import com.umeng.comm.core.beans.CommConfig;
 import com.umeng.comm.core.beans.CommUser;
+import com.umeng.comm.core.beans.MessageCount;
 import com.umeng.comm.core.constants.Constants;
-import com.umeng.comm.core.constants.ErrorCode;
 import com.umeng.comm.core.impl.CommunityFactory;
-import com.umeng.comm.core.login.LoginListener;
 import com.umeng.comm.core.utils.ResFinder;
 import com.umeng.comm.ui.activities.NotificationActivity;
 import com.umeng.comm.ui.fragments.CommunityMainFragment;
 import com.umeng.comm.ui.fragments.FindFragment;
 
-public class HomeActivity extends BaseActivity implements View.OnClickListener{
+public class HomeActivity extends BaseActivity implements View.OnClickListener ,FindFragment.OnMessageListener{
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerArrowDrawable drawerArrow;
@@ -45,11 +38,12 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     private FindFragment mFindFragment;
     private TextView tvTitle;
     private TextView tvRight;
+    private View mNotifyBadgeView;
+    private MessageCount mUnReadMsg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
@@ -57,6 +51,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         actionBar.setCustomView(R.layout.layout_toolbar);
         tvTitle= (TextView) findViewById(R.id.tv_title);
         tvRight= (TextView) findViewById(R.id.tv_right);
+        tvRight.setOnClickListener(tab3listener);
+        // 未读系统通知的红点
+        mNotifyBadgeView = findViewById(R.id.umeng_comm_badge_view);
+
         LeftMenuFrame=findViewById(R.id.drawer_left);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
 
@@ -82,6 +80,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         };
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
+
         CommunitySDK mCommSDK = CommunityFactory.getCommSDK(getApplicationContext());
         //初始化sdk，请传递ApplicationContext
         mCommSDK.initSDK(getApplicationContext());
@@ -105,18 +104,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
         bundle.putString(Constants.TYPE_CLASS, mContainerClass);
         mFindFragment.setArguments(bundle);
         mFragmentManager=getSupportFragmentManager();
-        showFragment(3);
+        mFragmentManager.beginTransaction()
+                .add(R.id.frameLayout, mContentFragment)
+                .add(R.id.frameLayout, mFeedsFragment)
+                .add(R.id.frameLayout, mFindFragment)
+                .commit();
+        showFragment(1);
 
 
-//        mFragmentAdapter=new HomeFramentAdapter(getSupportFragmentManager());
-//        getSupportFragmentManager().getFragments()
-//        viewPager.setAdapter(mFragmentAdapter);
-       // CommunityMainFragment mFeedsFragment = new CommunityMainFragment();
-        //设置Feed流页面的返回按钮不可见
-       // mFeedsFragment.setBackButtonVisibility(View.INVISIBLE);
-        //添加并显示Fragment
-        //getSupportFragmentManager().beginTransaction().add(R.id.container, mFeedsFragment).commit();
-
+        findViewById(R.id.tab1).setOnClickListener(this);
         findViewById(R.id.tab2).setOnClickListener(this);
         findViewById(R.id.tab3).setOnClickListener(this);
     }
@@ -125,18 +121,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
        FragmentTransaction mTransaction= mFragmentManager.beginTransaction();
        switch (position){
            case 1:
-                if(mFragmentManager.findFragmentByTag(position+"")==null){
-                   // mTransaction.add(R.id.frameLayout1, mContentFragment).commit();
-                }
-               mTransaction.replace(R.id.frameLayout, mContentFragment).commit();
+                mTransaction.show(mContentFragment).hide(mFeedsFragment).hide(mFindFragment).commit();
                break;
            case 2:
-               mTransaction
-                       .replace(R.id.frameLayout, mFeedsFragment).commit();
+              // mTransaction .replace(R.id.frameLayout, mFeedsFragment).commit();
+               mTransaction.hide(mContentFragment).show(mFeedsFragment).hide(mFindFragment).commit();
                break;
            case 3:
-               mTransaction
-                       .replace(R.id.frameLayout, mFindFragment).commit();
+              // mTransaction.replace(R.id.frameLayout, mFindFragment).commit();
+               mTransaction.hide(mContentFragment).hide(mFeedsFragment).show(mFindFragment).commit();
                break;
        }
    }
@@ -161,18 +154,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        int tvRightId=ResFinder.getId("umeng_comm_title_notify_btn");
         switch (v.getId()){
+            case R.id.tab1:
+                showFragment(1);
+                break;
             case R.id.tab2:
                 showFragment(2);
                 break;
             case R.id.tab3:
                 showFragment(3);
-                break;
-            case tvRightId: a
-//                Intent intent = new Intent(getActivity(), NotificationActivity.class);
-//                intent.putExtra(Constants.USER, mUser);
-//                startActivity(intent);
                 break;
         }
     }
@@ -180,20 +170,53 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener{
     private void showActionBar(int position){
         switch (position){
             case 1:
-                tvRight.setVisibility(View.GONE);
+                tvRight.setVisibility(View.INVISIBLE);
+                mNotifyBadgeView.setVisibility(View.INVISIBLE);
                 tvTitle.setText("资讯");
                 break;
             case 2:
-                tvRight.setVisibility(View.GONE);
+                tvRight.setVisibility(View.INVISIBLE);
+                mNotifyBadgeView.setVisibility(View.INVISIBLE);
                 tvTitle.setText("社区");
                 break;
             case 3:
                 tvRight.setVisibility(View.VISIBLE);
                 tvTitle.setText("发现");
                 // 右上角的通知
-                findViewById(ResFinder.getId("umeng_comm_title_notify_btn")).setOnClickListener(this);
+
+                setupUnReadNotifyBadge(mUnReadMsg);
                 break;
         }
 
+    }
+
+    View.OnClickListener tab3listener=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int tvRightId=ResFinder.getId("tv_right");
+            if(v.getId()==tvRightId){
+                Intent intent = new Intent(v.getContext(), NotificationActivity.class);
+                intent.putExtra(Constants.USER, CommConfig.getConfig().loginedUser);
+                startActivity(intent);
+                return;
+            }
+        }
+    };
+
+    /**
+     * 设置通知红点</br>
+     */
+    private void setupUnReadNotifyBadge(MessageCount mUnReadMsg) {
+        if (mUnReadMsg!=null&&mUnReadMsg.unReadNotice > 0) {
+            mNotifyBadgeView.setVisibility(View.VISIBLE);
+        } else {
+            mNotifyBadgeView.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    @Override
+    public void onMessage(MessageCount mUnReadMsg) {
+        this.mUnReadMsg=mUnReadMsg;
+        setupUnReadNotifyBadge(mUnReadMsg);
     }
 }

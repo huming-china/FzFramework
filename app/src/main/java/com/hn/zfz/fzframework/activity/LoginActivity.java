@@ -1,5 +1,6 @@
 package com.hn.zfz.fzframework.activity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
@@ -357,6 +358,7 @@ public class LoginActivity extends BaseActivity {
         moBtnTraveller.setVisibility(View.GONE);
 
         moLayoutWelcome.setVisibility(View.VISIBLE);
+        loginbbs();
     }
 
     // 动画结束
@@ -382,10 +384,11 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void loginbbs(){
+        String username=moEditUsername.getText().toString().trim();
         //创建CommUser前必须先初始化CommunitySDK
         CommunitySDK sdk = CommunityFactory.getCommSDK(this);
-        CommUser loginedUser = new CommUser("用户id"); // 用户id
-        loginedUser.name = "用户昵称"; // 用户昵称
+        CommUser loginedUser = new CommUser(username); // 用户id
+        loginedUser.name = username; // 用户昵称
         loginedUser.source = Source.SELF_ACCOUNT;// 账户系统来源
         loginedUser.gender = CommUser.Gender.FEMALE;// 用户性别
         loginedUser.level = 1; // 用户等级，非必须字段
@@ -402,6 +405,8 @@ public class LoginActivity extends BaseActivity {
                 //获取登录结果状态码
                 if (ErrorCode.NO_ERROR == stCode) {
                     //在此处可以跳转到任何一个你想要的activity
+                    Intent it=new Intent(LoginActivity.this,HomeActivity.class);
+                    startActivity(it);
                 }
             }
         });

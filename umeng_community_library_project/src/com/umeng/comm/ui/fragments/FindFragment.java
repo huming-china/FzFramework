@@ -24,6 +24,7 @@
 
 package com.umeng.comm.ui.fragments;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -73,7 +74,7 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
     @Override
     protected void initWidgets() {
         super.initWidgets();
-        findViewById(ResFinder.getId("umeng_comm_title_back_btn")).setOnClickListener(this);
+       // findViewById(ResFinder.getId("umeng_comm_title_back_btn")).setOnClickListener(this);
         findViewById(ResFinder.getId("umeng_comm_topic_recommend")).setOnClickListener(this);
         findViewById(ResFinder.getId("umeng_comm_user_recommend")).setOnClickListener(this);
         findViewById(ResFinder.getId("umeng_comm_usercenter_recommend")).setOnClickListener(this);
@@ -89,15 +90,15 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
         mMsgBadgeView.setVisibility(View.GONE);
 
         // 未读系统通知的红点
-        mNotifyBadgeView = findViewById(ResFinder.getId("umeng_comm_badge_view"));
+        //mNotifyBadgeView = findViewById(ResFinder.getId("umeng_comm_badge_view"));
 
-        TextView textView = (TextView) findViewById(ResFinder.getId("umeng_comm_title_tv"));
-        textView.setText(ResFinder.getString("umeng_comm_find"));
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        //TextView textView = (TextView) findViewById(ResFinder.getId("umeng_comm_title_tv"));
+        //textView.setText(ResFinder.getString("umeng_comm_find"));
+        //textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
 
         parseIntentData();
         setupUnreadFeedMsgBadge();
-        setupUnReadNotifyBadge();
+        //setupUnReadNotifyBadge();
         registerInitSuccessBroadcast();
     }
 
@@ -107,16 +108,7 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
         mUnReadMsg = CommConfig.getConfig().mMessageCount;
     }
 
-    /**
-     * 设置通知红点</br>
-     */
-    private void setupUnReadNotifyBadge() {
-        if (mUnReadMsg.unReadNotice > 0) {
-            mNotifyBadgeView.setVisibility(View.VISIBLE);
-        } else {
-            mNotifyBadgeView.setVisibility(View.INVISIBLE);
-        }
-    }
+
 
     /**
      * 设置消息数红点</br>
@@ -132,9 +124,9 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == ResFinder.getId("umeng_comm_title_back_btn")) { // 返回事件
+        //if (id == ResFinder.getId("umeng_comm_title_back_btn")) { // 返回事件
             //finish();
-        } else if (id == ResFinder.getId("umeng_comm_friends")) {
+        if (id == ResFinder.getId("umeng_comm_friends")) {
             showFriendsFragment();
         } else if (id == ResFinder.getId("umeng_comm_topic_recommend")) { // 话题推荐
             showRecommendTopic();
@@ -181,7 +173,6 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
     @Override
     public void onResume() {
         super.onResume();
-        setupUnReadNotifyBadge();
         setupUnreadFeedMsgBadge();
     }
 
@@ -354,15 +345,29 @@ public class FindFragment extends BaseFragment<Void, NullPresenter> implements O
         @Override
         public void onReceive(Context context, Intent intent) {
             mUnReadMsg = CommConfig.getConfig().mMessageCount;
-            setupUnReadNotifyBadge();
+            messageListener.onMessage(mUnReadMsg);
             setupUnreadFeedMsgBadge();
         }
     };
+
+    private OnMessageListener messageListener;
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            messageListener = (OnMessageListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + " must implement OnArticleSelectedListener");
+        }
+    }
 
     @Override
     public void onDestroy() {
         LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(mInitConfigReceiver);
         super.onDestroy();
     }
-    
+    public interface OnMessageListener{
+        public void onMessage(MessageCount mUnReadMsg);
+    }
+
 }

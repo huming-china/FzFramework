@@ -22,7 +22,7 @@
         android:layout_width="6dp"
         android:layout_height="6dp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/umeng_comm_circle_shape"
         android:visibility="invisible" />
@@ -37,6 +37,7 @@
         android:layout_toLeftOf="@id/umeng_comm_badge_view"
         android:contentDescription="@string/umeng_comm_new_post"
         android:padding="6dp"
+        android:visibility="invisible"
         android:src="@drawable/umeng_comm_find_bt" />
 
     <!-- tab组件 -->
