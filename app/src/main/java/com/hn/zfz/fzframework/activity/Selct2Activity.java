@@ -1,34 +1,29 @@
 package com.hn.zfz.fzframework.activity;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.hn.zfz.bean.FenLei;
 import com.hn.zfz.fzframework.R;
 import com.hn.zfz.fzframework.adapter.SelectAdapter;
 import com.hn.zfz.fzframework.base.BaseActivity;
 import com.hn.zfz.xml.PullXmlUtil;
-import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
-import com.umeng.comm.ui.adapters.BaseRecyclerAdapter;
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Selct1Activity extends BaseActivity implements SelectAdapter.OnItemClickListener{
+public class Selct2Activity extends BaseActivity {
     private RecyclerView mRecyclerView;
     private SelectAdapter mAdapter;
     @Override
@@ -40,12 +35,13 @@ public class Selct1Activity extends BaseActivity implements SelectAdapter.OnItem
         //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        get();
+        String id= getIntent().getExtras().getString("id");
+        get(id);
     }
-    private void get(){
+    private void get(String id){
         OkHttpClient mOkHttpClient = new OkHttpClient();
         RequestBody formBody = new FormEncodingBuilder()
-                .add("daleiid", "0")
+                .add("daleiid",id)
                 .add("xiaoleiid", "0")
                 .add("gongsiming","百川考试软件")
                 .build();
@@ -70,8 +66,7 @@ public class Selct1Activity extends BaseActivity implements SelectAdapter.OnItem
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            mRecyclerView.setAdapter(mAdapter = new SelectAdapter(fenleis));
-                            mAdapter.setListener(Selct1Activity.this);
+                            mRecyclerView.setAdapter(mAdapter = new SelectAdapter(fenleis,true));
                         }
                     });
                 } catch (XmlPullParserException e) {
@@ -80,12 +75,5 @@ public class Selct1Activity extends BaseActivity implements SelectAdapter.OnItem
             }
         });
 
-    }
-
-    @Override
-    public void ItemClickListener(View v, FenLei fl) {
-        Bundle bundle=new Bundle();
-        bundle.putString("id",fl.getId());
-        startActivity(Selct2Activity.class, bundle);
     }
 }

@@ -45,6 +45,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.Selct2Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.Selct1Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
         <!-- umeng  sdk   ================================================ -->
         <!-- feed主页面 -->
         <activity
