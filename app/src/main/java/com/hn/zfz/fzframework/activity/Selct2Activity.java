@@ -79,7 +79,7 @@ public class Selct2Activity extends BaseActivity {
 
     private void a(){
         SharedPreferences sharedPreferences=getSharedPreferences("user_select.dat", Context.MODE_PRIVATE);
-        sharedPreferences.edit().putString("selectId","").commit();
+        sharedPreferences.edit().putString("selectId","").commit()
 
     }
 }
