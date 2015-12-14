@@ -1,0 +1,350 @@
+[
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_cancel_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_cancel_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_loc.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_loc.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_ic_checkbox_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_ic_checkbox_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_cancel.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_cancel.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_send.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_send.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_find_setting.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_find_setting.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_forward_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_forward_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_search.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_search.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_back.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_back.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_loc_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_loc_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_setting.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_setting.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_back_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_back_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_switch_state_disable.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_switch_state_disable.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_favorites_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_favorites_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_setting_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_setting_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_share_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_share_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_ic_choice_green.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_ic_choice_green.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_emoji.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_emoji.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_remove.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_remove.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_new_post.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_new_post.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_delete.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_delete.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_send_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_send_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_switch_state_mask.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_switch_state_mask.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_more.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_more.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_favorites_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_favorites_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_comment_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_comment_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_recommend_friends.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_recommend_friends.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_more_user_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_more_user_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_switch_frame.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_switch_frame.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_forward_bg.9.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_forward_bg.9.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_find_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_find_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_emojipoint_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_emojipoint_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_copy.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_copy.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_bg.9.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_bg.9.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_notification.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_notification.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_switch_slider_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_switch_slider_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_comment_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_comment_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_more_user_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_more_user_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_add_image.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_add_image.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_tick.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_tick.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_male.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_male.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_switch_state_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_switch_state_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_user_topic.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_user_topic.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_photo.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_photo.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_camera_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_camera_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_user_recommend.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_user_recommend.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_notify.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_notify.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_back_white.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_back_white.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_at_friend_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_at_friend_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_top_announce.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_top_announce.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_community_location.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_community_location.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_topic_recommend.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_topic_recommend.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_photo_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_photo_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_female.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_female.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_ic_loading_white.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_ic_loading_white.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_emoji_keyboard.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_emoji_keyboard.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_emojipoint_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_emojipoint_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_camera.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_camera.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_not_found.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_not_found.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_announce.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_announce.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_share_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_share_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_topic_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_topic_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_white.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_white.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_forward_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_forward_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_find_normal.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_find_normal.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_topic.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_topic.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_bg_album_border.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_bg_album_border.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_gender_female.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_gender_female.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_gender_male.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_gender_male.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_uncheck.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_uncheck.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_nearby_recommend.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_nearby_recommend.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_album.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_album.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_top.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_top.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_topic_icon.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_topic_icon.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_ic_spinner_white.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_ic_spinner_white.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_realtime_icon.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_realtime_icon.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_user_center.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_user_center.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_switch_slider_disable.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_switch_slider_disable.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_new_post_pressed.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_new_post_pressed.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_reply.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_reply.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_at_friend.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_at_friend.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_report.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_report.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_like_icon.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_like_icon.png"
+    },
+    {
+        "merged": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\umeng_comm_bg_dark_translucent.png",
+        "source": "E:\\framework\\FzFramework\\umeng_community_library_project\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\umeng_comm_bg_dark_translucent.png"
+    }
+]
