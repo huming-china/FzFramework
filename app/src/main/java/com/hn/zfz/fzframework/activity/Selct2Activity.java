@@ -77,7 +77,7 @@ public class Selct2Activity extends BaseActivity {
         });
     }
 
-    private void a(){
+    private void save(){
         SharedPreferences sharedPreferences=getSharedPreferences("user_select.dat", Context.MODE_PRIVATE);
         sharedPreferences.edit().putString("selectId","").commit();
 
