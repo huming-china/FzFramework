@@ -29,6 +29,8 @@ dependencies {
     //compile 'com.android.support:appcompat-v7:23.0.1'
     //compile 'com.android.support:support-v4:23.0.1'
     compile 'com.bigkoo:convenientbanner:1.1.4'
+    //compile 'com.facebook.fresco:fresco:0.7.0'
+
     //compile 'com.android.support:percent:23.0.1'
     //compile 'com.android.support:recyclerview-v7:23.0.1'
     //compile 'com.squareup.leakcanary:leakcanary-android:1.3'

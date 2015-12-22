@@ -28,6 +28,7 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
+        android:name=".base.FzApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -48,9 +49,7 @@
         <activity
             android:name=".activity.Selct2Activity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.Selct1Activity"
-            android:theme="@style/AppTheme.NoActionBar" />
+
 
 
         <!-- umeng  sdk   ================================================ -->

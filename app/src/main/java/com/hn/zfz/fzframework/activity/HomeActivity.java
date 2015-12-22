@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.avos.avoscloud.AVAnalytics;
 import com.hn.zfz.fzframework.R;
 import com.hn.zfz.fzframework.base.BaseActivity;
 import com.hn.zfz.fzframework.fragment.ContentFragment;
@@ -115,6 +116,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener ,
         findViewById(R.id.tab1).setOnClickListener(this);
         findViewById(R.id.tab2).setOnClickListener(this);
         findViewById(R.id.tab3).setOnClickListener(this);
+        AVAnalytics.trackAppOpened(getIntent());
     }
    private void showFragment(int position){
        showActionBar(position);

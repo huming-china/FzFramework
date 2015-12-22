@@ -3,11 +3,19 @@ package com.hn.zfz.fzframework.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.FindCallback;
+import com.hn.zfz.bean.avosmodel.AVNews;
 import com.hn.zfz.fzframework.R;
 import com.hn.zfz.fzframework.base.BaseFragment;
 import com.hn.zfz.ui.widget.convenientbanner.CBPageAdapter;
@@ -15,13 +23,14 @@ import com.hn.zfz.ui.widget.convenientbanner.CBViewHolderCreator;
 import com.hn.zfz.ui.widget.convenientbanner.ConvenientBanner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by huming on 2015/12/2.
  */
 public class ContentFragment extends BaseFragment{
     private ConvenientBanner convenientBanner;
-
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,6 +57,17 @@ public class ContentFragment extends BaseFragment{
                         //设置翻页的效果，不需要翻页效果可用不设
                 .setPageTransformer(ConvenientBanner.Transformer.DefaultTransformer);
 //        convenientBanner.setManualPageable(false);//设置不能手动影响
+        RecyclerView mRecyclerView= (RecyclerView) view.findViewById(R.id.recyclerView);
+        mSwipeRefreshLayout= (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
+        mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_purple, android.R.color.holo_blue_bright, android.R.color.holo_orange_light, android.R.color.holo_red_light);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+            }
+        });
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        get();
     }
 
     public class LocalImageHolderView implements CBPageAdapter.Holder<Integer>{
@@ -65,4 +85,18 @@ public class ContentFragment extends BaseFragment{
             imageView.setImageResource(data);
         }
     }
+    private void get(){
+        AVQuery<AVNews> query = new AVQuery<AVNews>("News");
+        //query.whereEqualTo("pubUser", "LeanCloud官方客服");
+        query.findInBackground(new FindCallback<AVNews>() {
+            public void done(List<AVNews> avObjects, AVException e) {
+                if (e == null) {
+                    Log.d("成功", "查询到" + avObjects.size() + " 条符合条件的数据");
+                } else {
+                    Log.d("失败", "查询错误: " + e.getMessage());
+                }
+            }
+        });
+    }
+
 }
