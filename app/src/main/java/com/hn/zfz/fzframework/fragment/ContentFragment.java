@@ -92,6 +92,7 @@ public class ContentFragment extends BaseFragment{
             public void done(List<AVNews> avObjects, AVException e) {
                 if (e == null) {
                     Log.d("成功", "查询到" + avObjects.size() + " 条符合条件的数据");
+                   // avObjects；；
                 } else {
                     Log.d("失败", "查询错误: " + e.getMessage());
                 }
