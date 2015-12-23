@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -21,6 +22,9 @@ import com.hn.zfz.fzframework.base.BaseFragment;
 import com.hn.zfz.ui.widget.convenientbanner.CBPageAdapter;
 import com.hn.zfz.ui.widget.convenientbanner.CBViewHolderCreator;
 import com.hn.zfz.ui.widget.convenientbanner.ConvenientBanner;
+import com.hn.zfz.ui.widget.quickadapter.ISelectable;
+import com.hn.zfz.ui.widget.quickadapter.QuickRecycleViewAdapter;
+import com.hn.zfz.ui.widget.quickadapter.viewhelper.ViewHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +35,8 @@ import java.util.List;
 public class ContentFragment extends BaseFragment{
     private ConvenientBanner convenientBanner;
     private SwipeRefreshLayout mSwipeRefreshLayout;
+    private QuickRecycleViewAdapter mQuickRecycleAdapter;
+    private ArrayList<AVNews> arrayNews=new ArrayList<>();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,7 +63,7 @@ public class ContentFragment extends BaseFragment{
                         //设置翻页的效果，不需要翻页效果可用不设
                 .setPageTransformer(ConvenientBanner.Transformer.DefaultTransformer);
 //        convenientBanner.setManualPageable(false);//设置不能手动影响
-        RecyclerView mRecyclerView= (RecyclerView) view.findViewById(R.id.recyclerView);
+
         mSwipeRefreshLayout= (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_purple, android.R.color.holo_blue_bright, android.R.color.holo_orange_light, android.R.color.holo_red_light);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -66,7 +72,19 @@ public class ContentFragment extends BaseFragment{
 
             }
         });
+        RecyclerView mRecyclerView= (RecyclerView) view.findViewById(R.id.recyclerView);
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setAdapter(mQuickRecycleAdapter = new QuickRecycleViewAdapter<AVNews>(R.layout.layout_recycler_content_item, arrayNews) {
+
+            @Override
+            protected void onBindData(Context ctx, int position, AVNews avNews, ViewHelper helper) {
+                helper.setText(R.id.tvTitle, avNews.getTitle());
+                //helper.setRootOnClickListener(this);
+            }
+        });
+        mQuickRecycleAdapter.addHeaderView(null);
         get();
     }
 
@@ -87,12 +105,12 @@ public class ContentFragment extends BaseFragment{
     }
     private void get(){
         AVQuery<AVNews> query = new AVQuery<AVNews>("News");
-        //query.whereEqualTo("pubUser", "LeanCloud官方客服");
         query.findInBackground(new FindCallback<AVNews>() {
             public void done(List<AVNews> avObjects, AVException e) {
                 if (e == null) {
                     Log.d("成功", "查询到" + avObjects.size() + " 条符合条件的数据");
-                   // avObjects；；
+                   // avObjects
+                    mQuickRecycleAdapter.addItems(avObjects);
                 } else {
                     Log.d("失败", "查询错误: " + e.getMessage());
                 }
