@@ -37,15 +37,19 @@ public class ContentFragment extends BaseFragment{
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private QuickRecycleViewAdapter mQuickRecycleAdapter;
     private ArrayList<AVNews> arrayNews=new ArrayList<>();
+    private LayoutInflater inflater;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_content,null);
+        this.inflater=inflater;
         init(view);
         return view;
     }
     private void init(View view){
-        convenientBanner= (ConvenientBanner) view.findViewById(R.id.convenientBanner);
+       View bannerView=inflater.inflate(R.layout.layout_content_banner,null);
+        convenientBanner= (ConvenientBanner) bannerView.findViewById(R.id.convenientBanner);
         ArrayList<Integer> localImages= new ArrayList<Integer>();
         localImages.add(R.drawable.default_photo);
         //自定义你的Holder，实现更多复杂的界面，不一定是图片翻页，其他任何控件翻页亦可。
@@ -55,7 +59,7 @@ public class ContentFragment extends BaseFragment{
                     public LocalImageHolderView createHolder() {
                         return new LocalImageHolderView();
                     }
-                },localImages )
+                }, localImages)
                 //设置两个点图片作为翻页指示器，不设置则没有指示器，可以根据自己需求自行配合自己的指示器,不需要圆点指示器可用不设
                 .setPageIndicator(new int[]{R.drawable.default_photo, R.drawable.ic_launcher})
                         //设置指示器的方向
@@ -63,13 +67,12 @@ public class ContentFragment extends BaseFragment{
                         //设置翻页的效果，不需要翻页效果可用不设
                 .setPageTransformer(ConvenientBanner.Transformer.DefaultTransformer);
 //        convenientBanner.setManualPageable(false);//设置不能手动影响
-
         mSwipeRefreshLayout= (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_purple, android.R.color.holo_blue_bright, android.R.color.holo_orange_light, android.R.color.holo_red_light);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-
+                get();
             }
         });
         RecyclerView mRecyclerView= (RecyclerView) view.findViewById(R.id.recyclerView);
@@ -84,7 +87,7 @@ public class ContentFragment extends BaseFragment{
                 //helper.setRootOnClickListener(this);
             }
         });
-        mQuickRecycleAdapter.addHeaderView(null);
+        mQuickRecycleAdapter.addHeaderView(bannerView);
         get();
     }
 
@@ -110,12 +113,26 @@ public class ContentFragment extends BaseFragment{
                 if (e == null) {
                     Log.d("成功", "查询到" + avObjects.size() + " 条符合条件的数据");
                    // avObjects
-                    mQuickRecycleAdapter.addItems(avObjects);
+                    for (int i=0;i<20;i++){
+                        mQuickRecycleAdapter.addItems(avObjects);
+                    }
                 } else {
                     Log.d("失败", "查询错误: " + e.getMessage());
                 }
+                mSwipeRefreshLayout.setRefreshing(true);
             }
         });
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        convenientBanner.startTurning(5000);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        convenientBanner.stopTurning();
+    }
 }
