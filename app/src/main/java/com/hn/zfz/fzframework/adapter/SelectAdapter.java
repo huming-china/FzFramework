@@ -9,10 +9,13 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.hn.zfz.bean.FenLei;
 import com.hn.zfz.fzframework.R;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by huming on 2015/12/9.
@@ -102,5 +105,14 @@ public class SelectAdapter extends RecyclerView.Adapter<SelectAdapter.ViewHolder
 
     public interface OnItemClickListener{
         public void ItemClickListener(View v,FenLei fl);
+    }
+    public String selectedData(){
+        ArrayList<FenLei> resultArray=new ArrayList<>();
+        for (int i=0;i<arraySelected.size();i++){
+            if(arraySelected.get(i)){
+                resultArray.add(fenLeis.get(i));
+            }
+        }
+        return  JSON.toJSONString(resultArray);
     }
 }

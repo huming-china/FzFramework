@@ -14,10 +14,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.FindCallback;
 import com.hn.zfz.bean.avosmodel.AVNews;
 import com.hn.zfz.fzframework.R;
+import com.hn.zfz.fzframework.activity.ContentActivity;
 import com.hn.zfz.fzframework.base.BaseFragment;
 import com.hn.zfz.ui.widget.convenientbanner.CBPageAdapter;
 import com.hn.zfz.ui.widget.convenientbanner.CBViewHolderCreator;
@@ -82,9 +84,23 @@ public class ContentFragment extends BaseFragment{
         mRecyclerView.setAdapter(mQuickRecycleAdapter = new QuickRecycleViewAdapter<AVNews>(R.layout.layout_recycler_content_item, arrayNews) {
 
             @Override
-            protected void onBindData(Context ctx, int position, AVNews avNews, ViewHelper helper) {
+            protected void onBindData(Context ctx, int position,final AVNews avNews, ViewHelper helper) {
                 helper.setText(R.id.tvTitle, avNews.getTitle());
                 //helper.setRootOnClickListener(this);
+                //宽度200，高度100的缩略图
+                AVFile avFile= avNews.getImagefile();
+                if(avFile!=null) {
+                    String thumbnaiUrl = avFile.getThumbnailUrl(false, 200, 100);
+                }
+                //helper.setim
+                helper.setRootOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Bundle bundle=new Bundle();
+                        bundle.putParcelable("object",avNews);
+                        startActivity(ContentActivity.class, bundle);
+                    }
+                });
             }
         });
         mQuickRecycleAdapter.addHeaderView(bannerView);

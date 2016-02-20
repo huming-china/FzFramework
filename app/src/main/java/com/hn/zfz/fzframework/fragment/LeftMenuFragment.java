@@ -3,6 +3,7 @@ package com.hn.zfz.fzframework.fragment;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSON;
+import com.hn.zfz.bean.FenLei;
 import com.hn.zfz.fzframework.R;
 import com.hn.zfz.fzframework.base.BaseFragment;
 import com.hn.zfz.ui.widget.convenientbanner.CBPageAdapter;
@@ -24,6 +27,7 @@ import com.umeng.comm.core.beans.CommConfig;
 import com.umeng.comm.core.utils.CommonUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by huming on 2015/12/2.
@@ -50,6 +54,9 @@ public class LeftMenuFragment extends BaseFragment implements View.OnClickListen
             tvUsername.setVisibility(View.GONE);
             button.setText("登录");
         }
+        SharedPreferences sharedPreferences=getActivity().getSharedPreferences("user_select.dat", Context.MODE_PRIVATE);
+        String selecteds=sharedPreferences.getString("selectIds",null);
+        List<FenLei> parseArray=JSON.parseArray(selecteds,FenLei.class);
 
     }
 

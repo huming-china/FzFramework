@@ -27,6 +27,7 @@ import java.util.ArrayList;
 
 public class Selct2Activity extends BaseActivity {
     private RecyclerView mRecyclerView;
+    private SelectAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +68,7 @@ public class Selct2Activity extends BaseActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            mRecyclerView.setAdapter(new SelectAdapter(fenleis, true));
+                            mRecyclerView.setAdapter(mAdapter=new SelectAdapter(fenleis, true));
                         }
                     });
                 } catch (XmlPullParserException e) {
@@ -79,7 +80,6 @@ public class Selct2Activity extends BaseActivity {
 
     private void save(){
         SharedPreferences sharedPreferences=getSharedPreferences("user_select.dat", Context.MODE_PRIVATE);
-        sharedPreferences.edit().putString("selectId","").commit();
-
+        sharedPreferences.edit().putString("selectIds",mAdapter.selectedData()).commit();
     }
 }

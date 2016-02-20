@@ -49,6 +49,9 @@
         <activity
             android:name=".activity.Selct2Activity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ContentActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
 
 

@@ -1,14 +1,17 @@
 package com.hn.zfz.bean.avosmodel;
 
 import com.avos.avoscloud.AVClassName;
+import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
 import com.hn.zfz.ui.widget.quickadapter.ISelectable;
+
+import java.io.Serializable;
 
 /**
  * Created by huming on 2015/12/22.
  */
 @AVClassName("News")
-public class AVNews extends AVObject implements ISelectable{
+public class AVNews extends AVObject implements ISelectable,Serializable{
     public String getContent() {
         return getString("content");
     }
@@ -56,6 +59,12 @@ public class AVNews extends AVObject implements ISelectable{
     }
     public void setSubtitle(String value) {
         put("subtitle", value);
+    }
+    public void setImagefile(AVFile value) {
+        put("imagefile", value);
+    }
+    public AVFile getImagefile() {
+        return getAVFile("imagefile");
     }
 
     @Override
